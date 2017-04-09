@@ -1,0 +1,338 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>登陆</title>
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/page.css">
+<script src="js/bootstrap.min.js"></script>
+<!--<script>
+	 window.onload = function() {
+           var container = document.getElementById('header-info-screen');
+            var list = document.getElementById('list');
+            var buttons = document.getElementById('buttons').getElementsByTagName('span');
+            var prev = document.getElementById('prev');
+            var next = document.getElementById('next');
+            var index = 1;
+            var timer;
+
+            function animate(offset) {
+               var newLeft = parseInt(list.style.left) + offset;
+                list.style.left = newLeft + 'px';
+                if (newLeft > -320) {
+                    list.style.left = -1600 + 'px';
+                }
+                if (newLeft < -1600) {
+                    list.style.left = -320 + 'px';
+                }
+            }
+
+            function play() {
+                timer = setInterval(function() {
+                    next.onclick();
+                }, 2000)
+            }
+
+            function stop() {
+                clearInterval(timer);
+            }
+
+            function buttonsShow() {
+                for (var i = 0; i < buttons.length; i++) {
+                    if (buttons[i].className == "on") {
+                        buttons[i].className = "";
+                    }
+                }
+                buttons[index - 1].className = "on";
+            }
+
+            prev.onclick = function() {
+                index -= 1;
+                if (index < 1) {
+                    index = 5
+                }
+                buttonsShow();
+                animate(320);
+            };
+
+            next.onclick = function() {
+                index += 1;
+                if (index > 5) {
+                    index = 1
+                }
+                animate(-320);
+                buttonsShow();
+            };
+
+            for (var i = 0; i < buttons.length; i++) {
+                (function(i) {
+                    buttons[i].onclick = function() {
+                        var clickIndex = parseInt(this.getAttribute('index'));
+                        var offset = 320 * (index - clickIndex);
+                        animate(offset);
+                        index = clickIndex; 
+                        buttonsShow();
+                    }
+                })(i)
+            }
+
+            container.onmouseover = stop;
+            container.onmouseout = play;
+            play();
+
+        }
+	</script>-->
+</head>
+
+<body>
+ <div class="background">
+	<div class="search">
+		<input type="text" id="ss-l">
+		  <input class="" id="ss-r"   type="submit" value="搜索"/>
+	</div>
+	<div class="container">
+	  <div class="row">
+			<div class="col-md-2 col-md-offset-2" style="padding: 3px">
+    			<div id="login" >
+    			<center><img src="img/login-user.png" alt="user"
+    			id="login-img" /></center>
+    			<hr style="size: :1px;border:none;border-top:1px dotted #fff;">
+     			<form action="#" method="post">
+      			<input type="text" class="user" required title="Username required" placeholder="用户名"
+					   name="u" >
+					   <img class="user-img" src="img/user-img.png">
+				<input type="password"  class="password" required title="Password required" placeholder="密码" name="p">
+    			<img class="password-img" src="img/password-img.png">
+     			<input type="text" id="yanzheng" placeholder="验证码">
+     			<img src="img/yanzheng.png" id="yanzheng-img">
+     			<img id="refresh" src="img/login-re.png">
+     			<buttom class="btn" type="submit">登录</buttom>
+      			<div class="olvido">
+        			<a href="#">忘记密码</a>&nbsp|
+        			<a href="#">记住密码</a>
+        			<input type="checkbox"
+        			style="vertical-align: bottom">
+      			</div>   
+				</form>
+	    		</div>
+		    </div>
+		  <div class="col-md-6">
+     		<div class="row">
+     			<div class="col-md-12" style="padding: 3px">
+     				<div id="title">
+    				   <img src="img/title-image1.png">
+     				   <!--<script language="javascript" >
+			 var da=[];
+		da.push({src:"img/title-image1.png",name:"one"});
+		da.push({src:"img/title-image2.png",name:"two"});
+		da.push({src:"img/title-image3.png",name:"three"});
+		da.push({src:"img/title-image4.png",name:"four"});
+		var c={
+			 bg:"#333",
+			 color:"#FFF",
+			 cbg:"#FFF",
+			 ccolor:"#333",
+			 bc:"#ccc",
+			 step:6000
+			}
+		new IMGS("TopI",700,140,da,c);
+</script>-->
+     				</div> 
+     			</div>
+     		</div>
+		     <div class="row">
+		  <div class="col-md-4"  style="padding: 3px">
+	    	<div id="tongzhi">
+	    	 <img src="img/block-img.png">
+		    	<h5>通知公告</h5>
+		    		<ul>
+						<li>通知公告示例</li>
+						<li>通知公告示例</li>
+						<li>通知公告示例</li>
+						<li>通知公告示例</li>
+						<li>通知公告示例</li>
+				</ul></div>
+	      </div>
+			<div class="col-md-8"  style="padding: 3px">
+		  	 <div id="guozi" style="padding: 3px">
+		  	 <img src="img/block-img.png">
+			  <h5>国资动态</h5>
+			   <img class="guozi-img" src="img/gzdt-img.png">
+			  	<ul class="guozi-list">
+					<li>国资动态示例</li>
+					<li>国资动态示例</li>
+					<li>国资动态示例</li>
+					<li>国资动态示例</li>
+					<li>国资动态示例</li>
+				 </ul></div>
+				 <ul class="guozi-right">
+				 	<li style="background:#ffffff color:#63e5fd">4-07</li>
+					<li style="background:#63e5fd">4-05</li>
+					<li style="background:#5ed4fd">3-38</li>
+					<li style="background:#40c6f0">3-23</li>
+					<li style="background:#3bb3e8">3-18</li>
+					<li style="background:#219ccf">3-07</li>
+				 </ul>
+		    </div>
+		</div><!--row1 end--> 
+	   </div>
+	  </div>
+	  <div class="row">
+		<div class="col-md-2 col-md-offset-2" 
+		style="padding: 3px" >
+		  <div id="jishu">
+		  <img src="img/block-img.png">
+			  <h5>技术支持</h5>
+			  <ul>
+					<li>技术支持示例</li>
+					<li>技术支持示例</li>
+					<li>技术支持示例</li>
+					<li>技术支持示例</li>
+					<li>技术支持示例</li>
+			  </ul></div>
+		  </div>
+		  <div class="col-md-2"   style="padding: 3px">
+	    	<div id="zhengce">
+	    	<img src="img/block-img.png">
+		    <h5>政策文件</h5>
+		    <ul>
+					<li>政策文件示例</li>
+					<li>政策文件示例</li>
+					<li>政策文件示例</li>
+					<li>政策文件示例</li>
+					<li>政策文件示例</li>
+				</ul></div>
+	      </div>
+			<div class="col-md-2" style="padding: 3px">
+		  	<div id="dangyuan">
+		  	<img src="img/block-img.png">
+			  <h5>党员教育</h5>
+			    <ul>
+					<li>党员教育示例</li>
+					<li>党员教育示例</li>
+					<li>党员教育示例</li>
+					<li>党员教育示例</li>
+					<li>党员教育示例</li>
+				</ul></div>
+		   </div>
+			<div class="col-md-2" style="padding: 3px">
+		  	<div id="ziliao">
+		  	<img src="img/block-img.png">
+			  <h5>资料下载</h5>
+			   <ul>
+					<li>资料下载示例</li>
+					<li>资料下载示例</li>
+					<li>资料下载示例</li>
+					<li>资料下载示例</li>
+					<li>资料下载示例</li>
+				</ul></div>
+		    </div>
+	  </div><!--row2 end-->
+	</div><!--container end-->
+	<div class="footer">
+		<center>Copyright.&copy; 2017 YaGuo Company All rights reserved 雅果XXXX版权所有</center>
+	</div>
+  </div><!--background end-->
+  <script>
+	function IMGS(id,w,h,da,c){
+  this.w=w;
+  this.h=h;
+  this.da=da;
+  this.l=da.length;
+  this.html="";
+  this.id=id;
+  this.child={img:[],div:[]};
+  this.cr=0;
+  this.xx=0;
+  this.m=10;
+  this.pr=null;
+  this.time=false;
+  if(typeof c =="undefined"){
+    this.c={bg:"#600",color:"#fff",cbg:"#eee",ccolor:"#600",bc:"#ccc",step:6000}
+  }else{
+    this.c=c;
+  }
+  this.step=this.c.step;
+  this.init();
+}
+IMGS.prototype={
+  init:function(){
+	document.writeln('<div id="'+this.id+'" style="position:relative;width:'+this.w+'px;height:'+this.h+'px;"></div>');
+	var Bdiv=document.createElement("div");
+	Bdiv.style.cssText="position:absolute;right:10px;bottom:1px;height:25px;z-index:100;";
+	this.$(this.id).appendChild(Bdiv);
+	var self=this;
+    for(var i=this.l-1;i>=0;i--){
+	  var img=document.createElement("img");
+	  var div=document.createElement("div");
+	  img.width=this.w;
+	  img.height=this.h;
+	  img.border="0";
+	  img.src=this.da[i].src;
+	  img.alt=this.da[i].name;
+	  div.innerHTML=(i+1);
+	  div.style.cssText="float:right;width:20px;height:18px;margin-right:5px;border:1px solid "+this.c.bc+";line-height:18px;text-align:center;cursor:default";
+	  if(i>0){
+	  div.style.cssText+="background:"+this.c.bg+";color:"+this.c.color+";";
+	  }else{
+	  div.style.cssText+="background:"+this.c.cbg+";color:"+this.c.ccolor+";";
+	  }
+	  if(typeof this.da[i].link !=""){
+	    var a=document.createElement("a");
+		a.href=this.da[i].link;
+		a.appendChild(img);
+		this.child.img[i]=a;
+		this.$(this.id).appendChild(a);
+	  }else{
+	   this.child.img[i]=img;
+	   this.$(this.id).appendChild(img);
+	  }
+	  this.child.img[i].style.cssText+=";position:absolute;left:0px;top:0px;z-index:1;display:none";
+	  this.child.div[i]=div;
+	  div.onmouseover=function(){
+	     self.Cl(parseInt(this.innerHTML)-1);
+	  }
+	  if(this.l>0)this.pr=this.child.img[0];
+	  if(this.l>1)Bdiv.appendChild(div);
+	}
+	this.Go();
+  },
+  Go:function(){
+	var self=this; 
+	for(var i=0;i<this.l;i++){
+     this.child.img[i].style.zIndex="1";
+	 this.child.div[i].style.background=this.c.bg;
+	 this.child.div[i].style.color=this.c.color;
+    }
+	if(this.pr!=null)this.pr.style.zIndex="10";
+	this.pr=this.child.img[this.cr];
+	this.m=10;
+	with(this.child.img[this.cr].style){filter='alpha(opacity=10)';opacity=0.1;display="";zIndex="20";}
+	this.None(self,this.child.img[this.cr]);
+	with(this.child.div[this.cr].style){background=this.c.cbg;color=this.c.ccolor;}
+	this.cr++;
+	if(this.cr==this.l)this.cr=0;
+	if(this.l>1)this.time=setTimeout(function(){self.Go()},this.step);
+  },
+  None:function(self,tt){
+	  with(tt.style){filter='alpha(opacity='+self.m+')';opacity=(self.m/100);}
+		self.m+=5;
+		if(self.m<101)
+		self.xx=setTimeout(function(){self.None(self,tt)},10);
+		else
+		clearInterval(self.xx);
+  },
+  Cl:function(cr){
+	 clearInterval(this.xx);
+	 clearTimeout(this.time);
+	 this.cr=cr;
+	 this.Go();
+	 
+  },
+  $:function(id){return document.getElementById(id);}
+}
+	</script>	
+</body>
+</html>
+
