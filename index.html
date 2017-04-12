@@ -7,6 +7,19 @@
 <link rel="stylesheet" href="css/bootstrap.min.css">
 <link rel="stylesheet" href="css/page.css">
 <script src="js/bootstrap.min.js"></script>
+<script>
+ function tab(pid){
+  var tabs=["tab1","tab2","tab3","tab4","tab5","tab6"];
+  for(var i=0;i<6;i++){
+   if(tabs[i]==pid){
+	   document.getElementById(tabs[i]).style.display="block";
+  }
+   else{
+    document.getElementById(tabs[i]).style.display="none";
+  }
+  }
+ }
+ </script>
 <!--<script>
 	 window.onload = function() {
            var container = document.getElementById('header-info-screen');
@@ -159,20 +172,56 @@
 		  	 <img src="img/block-img.png">
 			  <h5>国资动态</h5>
 			   <img class="guozi-img" src="img/gzdt-img.png">
-			  	<ul class="guozi-list">
-					<li>国资动态示例</li>
-					<li>国资动态示例</li>
-					<li>国资动态示例</li>
-					<li>国资动态示例</li>
-					<li>国资动态示例</li>
-				 </ul></div>
+			  	<ul id="tab1" class="guozi-list">
+					<li>国资动态示例1</li>
+					<li>国资动态示例1</li>
+					<li>国资动态示例1</li>
+					<li>国资动态示例1</li>
+					<li>国资动态示例1</li>
+				 </ul>
+				 <ul id="tab2" class="guozi-list">
+					<li>国资动态示例2</li>
+					<li>国资动态示例2</li>
+					<li>国资动态示例2</li>
+					<li>国资动态示例2</li>
+					<li>国资动态示例2</li>
+				 </ul>
+				 <ul id="tab3" class="guozi-list">
+					<li>国资动态示例3</li>
+					<li>国资动态示例3</li>
+					<li>国资动态示例3</li>
+					<li>国资动态示例3</li>
+					<li>国资动态示例3</li>
+				 </ul>
+				 <ul id="tab4" class="guozi-list">
+					<li>国资动态示例4</li>
+					<li>国资动态示例4</li>
+					<li>国资动态示例4</li>
+					<li>国资动态示例4</li>
+					<li>国资动态示例4</li>
+				 </ul>
+				 <ul id="tab5" class="guozi-list">
+					<li>国资动态示例5</li>
+					<li>国资动态示例5</li>
+					<li>国资动态示例5</li>
+					<li>国资动态示例5</li>
+					<li>国资动态示例5</li>
+				 </ul>
+				 <ul id="tab6" class="guozi-list">
+					<li>国资动态示例6</li>
+					<li>国资动态示例6</li>
+					<li>国资动态示例6</li>
+					<li>国资动态示例6</li>
+					<li>国资动态示例6</li>
+				 </ul>
+				 </div>
 				 <ul class="guozi-right">
-				 	<li style="background:#ffffff color:#63e5fd">4-07</li>
-					<li style="background:#63e5fd">4-05</li>
-					<li style="background:#5ed4fd">3-38</li>
-					<li style="background:#40c6f0">3-23</li>
-					<li style="background:#3bb3e8">3-18</li>
-					<li style="background:#219ccf">3-07</li>
+				 	<li id="tabnav1" onclick="tab('tab1')"  style="background:#ffffff color:#63e5fd">4-07</li>
+					<li id="tabnav2" onclick="tab('tab2')" style="background:#63e5fd">4-05</li>
+					<li id="tabnav3" onclick="tab('tab3')" style="background:#5ed4fd">3-38</li>
+					<li id="tabnav4" onclick="tab('tab4')" style="background:#40c6f0">3-23</li>
+					<li id="tabnav5" onclick="tab('tab5')" style="background:#3bb3e8">3-18</li>
+					<li id="tabnav6" onclick="tab('tab6')" style="background:#219ccf">3-07</li>
 				 </ul>
 		    </div>
 		</div><!--row1 end--> 

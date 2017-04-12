@@ -14,6 +14,9 @@
 <script src="js/ace-extra.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/ace-elements.min.js"></script>
+<script src="js/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/jquery.mobile.custom.min.js"></script>
+<script src="js/main-page.js"></script>
 </head>
 
 <body>
@@ -24,33 +27,37 @@
  <div class="navbar-container" id="navbar-container">
    <div class="navbar-header pull-left">
 		<a href="#" class="navbar-brand">
-		<small>国资监管系统</small>
+		<small>yagoole国资监管系统</small>
 		</a><!-- /.brand -->
 	</div><!-- /.navbar-header left-->
 	<div class="navbar-header pull-right" role="navigation">
 	<ul class="nav ace-nav">
-  		<li class="">
+  		<li class="right-list" id="calender">
+ 		  <a href="#">
   		  <em class="icon-calendar"></em> 
+  		  </a>
   		</li>
-  		<li class="">
-  		  <em class="icon-comment"></em> 
+  		<li class="right-list" id="chat">
+ 		   <a href="#">
+ 		   	<em class="icon-comment"></em> 
+ 		   </a>
   		</li>
-  		<li class="">
+  		<li class="right-list" id="alert">
+  		  <a href="#">
   		  <em class="icon-bell-alt"></em> 
+  		  </a>
   		</li>
-  		 <li class="">
-  		  <em class="icon-envelope"></em> 	
-  		  <span class="badge">4</span>
+  		 <li class="right-list" id="message">
+  		  <a href="#">
+  		  <em class="icon-envelope"></em> 
+  		  </a>	
   		</li>
- 
-			<li class="light-blue">
-				<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-				  <img class="nav-user-photo" src="img/timg.jpg" alt="Photo" />
+			<li class="right-list-user">
+				<a data-toggle="dropdown" href="#" class="dropdown-toggle" id="user">
 					<span class="user-info">
-					<small>欢迎您</small>
-									TEX
+					<small>欢迎您</small>TEX
 						</span>
-				<i class="icon-caret-down"></i>
+				<i class="icon-caret-down"></i><img class="nav-user-photo" src="img/timg.jpg" alt="Photo" />
 							</a>
 			<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 				<li>
@@ -59,7 +66,6 @@
 						系统设置
 					</a>
 				</li>
-
 				<li>
 					<a href="#">
 					<i class="icon-user"></i>
@@ -78,131 +84,122 @@
 		</ul><!-- /.nav ace-nav-->
 	</div><!-- /.navbar-header right-->
   </div><!-- /.navbar-container-->
-</div><!-- /.navbar navbar-default -->
-	<script type="text/javascript">
-				try{ace.settings.check('main-container' , 'fixed')}catch(e){}
-			</script>
-	<div class="main-container-inner">
-		<a class="menu-toggler" id="menu-toggler" href="#">
-		<span class="menu-text"></span>
-				</a>
-		<div class="sidebar" id="sidebar">
-			<script type="text/javascript">
-			try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
-					</script>
-		<div class="sidebar-shortcuts" id="sidebar-shortcuts">
-		<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-		<button class="btn btn-success">
-			<img src="img/user-img.png">
-			</button>
-		<button class="btn btn-info">
-			<img src="img/user-img.png">
-			</button>
-		<button class="btn btn-warning">
-			<img src="img/user-img.png">
-							</button>
-		<button class="btn btn-danger">
-			<img src="img/user-img.png">
-				</button>
-					<button class="btn btn-success">
-			<img src="img/user-img.png">
-			</button>
-		<button class="btn btn-info">
-			<img src="img/user-img.png">
-			</button>
-		<button class="btn btn-warning">
-			<img src="img/user-img.png">
-							</button>
-		<button class="btn btn-danger">
-			<img src="img/user-img.png">
-				</button>
-						</div>
-		<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
-			<span class="btn btn-success"></span>
-			<span class="btn btn-info"></span>
-			<span class="btn btn-warning"></span>
-			<span class="btn btn-danger"></span>
-				</div>
-		</div><!-- #sidebar-shortcuts -->
-			<ul class="nav nav-list">
-				<li class="active">
-				<a href="#">
-				<i class="icon-tasks"></i>
-					<span class="menu-text">业务场景一</span>
-					</a>
-				</li>
-				<li>
-				<a href="#">
-				<i class="icon-tasks"></i>
-					<span class="menu-text">业务场景二</span>
-				</a>
-				</li>
-				<li>
-				<a href="#">
-				<i class="icon-tasks"></i>
-					<span class="menu-text">业务场景三</span>
-				</a>
-				</li>
-				<li>
-				<a href="#">
-				<i class="icon-tasks"></i>
-					<span class="menu-text">业务场景四</span>
-				</a>
-				</li>
-				<li>
-				<a href="#">
-				<i class="icon-tasks"></i>
-					<span class="menu-text">业务场景五</span>
-				</a>
-				</li>
-				<li>
-				<a href="#">
-				<i class="icon-tasks"></i>
-					<span class="menu-text">业务场景六</span>
-				</a>
-				</li>
-			</ul><!-- /.nav-list -->
-		<div class="sidebar-collapse" id="sidebar-collapse">
-				<i class="icon-double-angle-left" data-icon1="icon-double-angle-left" data-icon2="icon-double-angle-right"></i>
-					</div>
-		<script type="text/javascript">
-			try{ace.settings.check('sidebar' , 'collapsed')}catch(e){}
-			</script>
-		</div><!--sidebar end-->
-				<div class="main-content">
-					<div class="breadcrumbs" id="breadcrumbs">
-				<script type="text/javascript">	try{ace.settings.check('breadcrumbs' , 'fixed')}catch(e){}
-						</script>
-			<ul class="breadcrumb">
-				<li>
-				<i class="icon-home home-icon"></i>
-				<a href="#">Home</a>
-				</li>
-				<li>
-				<a href="#">Other Pages</a>
-				</li>
-				<li class="active">Blank Page</li>
-				</ul><!-- .breadcrumb -->
-			<div class="nav-search" id="nav-search">
-			<form class="form-search">
-				<span class="input-icon">
-				<input placeholder="搜索" class="nav-search-input" id="nav-search-input" autocomplete="off" type="text">
-				<i class="icon-search nav-search-icon"></i>
-					</span>
-				</form>
-			</div><!-- #nav-search -->
-					</div>
-			<div class="page-content">
-					<div class="row">
-					<div class="col-xs-12">
-				<!-- PAGE CONTENT BEGINS -->
+</div><!-- /.navbar navbar-default --> 
+    <script type="text/javascript" src="js/jQuery3.2.0.js" ></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#documents a").click(function() {
+                addTab($(this));
+            });
 
-				<!-- PAGE CONTENT ENDS -->
-				  </div><!-- /.col -->
-			</div><!-- /.row -->
-		</div><!-- /.page-content -->
-	</div><!-- /.main-content -->
-	</div><!-- /.main-container-inner -->
+            $('#tabs a.tab').live('click', function() {
+                // Get the tab name
+                var contentname = $(this).attr("id") + "_content";
 
+                // hide all other tabs
+                $("#content p").hide();
+                $("#tabs li").removeClass("current");
+
+                // show current tab
+                $("#" + contentname).show();
+                $(this).parent().addClass("current");
+            });
+
+            $('#tabs a.remove').live('click', function() {
+                // Get the tab name
+                var tabid = $(this).parent().find(".tab").attr("id");
+
+                // remove tab and related content
+                var contentname = tabid + "_content";
+                $("#" + contentname).remove();
+                $(this).parent().remove();
+
+                // if there is no current tab and if there are still tabs left, show the first one
+                if ($("#tabs li.current").length == 0 && $("#tabs li").length > 0) {
+
+                    // find the first tab    
+                    var firsttab = $("#tabs li:first-child");
+                    firsttab.addClass("current");
+
+                    // get its link name and show related content
+                    var firsttabid = $(firsttab).find("a.tab").attr("id");
+                    $("#" + firsttabid + "_content").show();
+                }
+            });
+        });
+        function addTab(link) {
+            // If tab already exist in the list, return
+            if ($("#" + $(link).attr("rel")).length != 0)
+                return;
+            
+            // hide other tabs
+            $("#tabs li").removeClass("current");
+            $("#content p").hide();
+            
+            // add new tab and related content
+            $("#tabs").append("<li class='current'><a class='tab' id='" +
+                $(link).attr("rel") + "' href='#'>" + $(link).html() + 
+                "</a><a href='#' class='remove'>x</a></li>");
+
+            $("#content").append("<p id='" + $(link).attr("rel") + "_content'>" + 
+                $(link).attr("title") + "</p>");
+            
+            // set the newly added tab as current
+            $("#" + $(link).attr("rel") + "_content").show();
+        }
+    </script>
+	 <div id="main"> 
+       <div class="back-top"></div>
+       <div class="back-bottom"></div>
+        <div class="sidelist">
+            <a href="#" id="side-icon">
+            <img src="img/side.png"></a>
+        	<a href="#" id="jichuziliao">
+        	<img src="img/基础资料.png"></a>
+        	<a href="#" id="renshizonghe">
+        	<img src="img/人事综合.png"></a>
+        	<a href="#" id="qiyechanquan">
+        	<img src="img/企业产权.png"></a>
+        	<a href="#" id="gudingzichan">
+        	<img src="img/固定资产.png"></a>
+        	<a href="#" id="touzirongzi">
+        	<img src="img/投资融资.png"></a>
+        	<a href="#" id="zongheshiwu">
+        	<img src="img/综合事务.png"></a>
+        	<a href="#" id="dangjiangongzuo"><img src="img/党建工作.png"></a>
+        	<a href="#" id="caichanjiandu"><img src="img/财产监督.png"></a>
+        </div>
+       <div id="doclist">
+        <ul id="documents">
+            <li><a href="#" rel="Document1" title="This is the content of Document1">业务场景一</a>
+            </li>
+            <li><a href="#" rel="Document2" title="This is the content of Document2">业务场景二
+            </a>
+            </li>
+            <li><a href="#" rel="Document3" title="This is the content of Document3">业务场景三
+            </a>
+            </li>
+            <li><a href="#" rel="Document4" title="This is the content of Document4">业务场景四
+            </a>
+            </li>
+            <li><a href="#" rel="Document5" title="This is the content of Document5">业务场景五
+            </a>
+            </li>
+            <li><a href="#" rel="Document6" title="This is the content of Document6">业务场景六
+            </a>
+            </li>
+        </ul>
+    </div>
+    <div id="wrapper">
+        <ul id="tabs">
+            <!-- Tabs go here -->
+            <li><a href="#">主页</a></li>
+            <li><a href="#">示例</a></li>
+        </ul>
+        <div id="content">
+            <!-- Tab content goes here -->
+        </div>
+    </div><!--wrapper-->
+   </div><!--main end-->			
 </body>
 </html>

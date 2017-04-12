@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>公告</title>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="fonts/css/font-awesome.css">
+<link rel="stylesheet" href="css/gonggao.css">
+<script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="header">
+	<div class="header-left">
+			<h4>yagoogle 国资监管系统</h4>
+	</div>
+	<div class="header-search">
+		<input type="text" id="ss-l">
+	<input id="ss-r"  type="submit" value="搜索"/>
+	</div>
+	<buttom class="btn" type="submit">登录</buttom>
+</div>
+<div class="bottom">
+<div class="container">
+	<img id="back1" src="img/back1.png">
+	<img id="back2" src="img/back2.png">
+			<ul class="breadcrumb">
+				<li>
+				<i class="icon-map-marker"></i>
+				<a href="#">首页</a>
+				</li>
+				<li class="active">通知公告</li>
+						</ul>
+	<div class="left-list">
+		<div class="tabNav">
+		<ul>	
+			<li id="tongzhi" onclick="tab('tab1')" >
+			<div class="box">
+			<i class="icon-bullhorn icon-large"></i></div>
+			通知公告
+			</li>
+			<li id="qiye" onclick="tab('tab2')">
+			<div class="box">
+			<i class="icon-user icon-large"></i></div>
+			企业风采
+			</li>
+			<li id="zhengce" onclick="tab('tab3')">
+          <div class="box">
+           <i class="icon-file-text-alt icon-large"></i></div>
+           政策文件
+           </li>
+            <li id="guozi" onclick="tab('tab4')">
+            <div class="box">
+            <i class="icon-list-ul icon-large"></i></div>
+            国资动态
+            </li>
+            <li id="ziliao" onclick="tab('tab5')">
+            <div class="box">
+            <i class="icon-download-alt icon-large"></i></div>
+            资料下载
+            </li>
+            <li id="dangyuan" onclick="tab('tab6')">
+            <div class="box">
+            <i class="icon-book icon-large"></i></div>
+            党员教育
+            </li>
+            <li id="jishu" onclick="tab('tab7')">
+            <div class="box">
+				<i class="icon-lightbulb icon-large"></i></div>
+            技术支持
+            </li>
+            <li id="shouye">
+            <i class="icon-home icon-2x" id="home"></i>
+            回到首页
+            </li>
+		</ul>
+		</div>								
+	</div>
+	<script>
+ function tab(pid){
+  var tabs=["tab1","tab2","tab3","tab4","tab5","tab6","tab7"];
+  for(var i=0;i<7;i++){
+   if(tabs[i]==pid){
+	   document.getElementById(tabs[i]).style.display="block";
+  }
+   else{
+    document.getElementById(tabs[i]).style.display="none";
+  }
+  }
+ }
+	</script>
+	<div class="right-list">
+	<div id="tab">
+	   <div id="tab1">
+	   <hr/>
+	   <h5>通知公告内容示例</h5>
+	   <hr/>
+	   <h5>通知公告内容示例</h5>
+	   <hr/>
+	   <h5>通知公告内容示例</h5>
+	   <hr/>
+	   <h5>通知公告内容示例</h5>
+	   <hr/>
+	   <h5>通知公告内容示例</h5>
+	   </div>
+	   <div id="tab2">
+	    <hr/>
+	   <h5>企业风采内容示例</h5>
+	    <hr/>
+	   <h5>企业风采内容示例</h5>
+	    <hr/>
+	   <h5>企业风采内容示例</h5>
+	    <hr/>
+	   <h5>企业风采内容示例</h5>
+	    <hr/>
+	   <h5>企业风采内容示例</h5>
+	   </div>
+	   <div id="tab3">
+	    <hr/>
+	   <h5>政策文件内容示例</h5>
+	   	    <hr/>
+	   <h5>政策文件内容示例</h5>
+	   	    <hr/>
+	   <h5>政策文件内容示例</h5>
+	   	    <hr/>
+	   <h5>政策文件内容示例</h5>
+	   	    <hr/>
+	   <h5>政策文件内容示例</h5>
+	   </div>
+	   <div id="tab4">
+	   	  <hr/>
+	   <h5>国资动态内容示例</h5>
+	   	  <hr/>
+	   <h5>国资动态内容示例</h5>
+	   	  <hr/>
+	   <h5>国资动态内容示例</h5>
+	   	  <hr/>
+	   <h5>国资动态内容示例</h5>
+	   	  <hr/>
+	   <h5>国资动态内容示例</h5>	   	    
+	   </div>
+	   <div id="tab5">
+	   	<hr/>
+	   <h5>资料下载内容示例</h5>
+	   	   	<hr/>
+	   <h5>资料下载内容示例</h5>
+	   	   	<hr/>
+	   <h5>资料下载内容示例</h5>	   
+	   	<hr/>
+	   <h5>资料下载内容示例</h5>
+	   	   	<hr/>
+	   <h5>资料下载内容示例</h5>
+	   </div>
+	   <div id="tab6">
+	   	<hr/>
+	   <h5>党员教育内容示例</h5>
+	   	   	<hr/>
+	   <h5>党员教育内容示例</h5>
+	   	   	<hr/>
+	   <h5>党员教育内容示例</h5>
+	   	   	<hr/>
+	   <h5>党员教育内容示例</h5>
+	   	   	<hr/>
+	   <h5>党员教育内容示例</h5>
+	   </div>
+	   <div id="tab7">
+	   	   	<hr/>
+	   <h5>技术支持内容示例</h5>
+	   	   	   	<hr/>
+	   <h5>技术支持内容示例</h5>
+	   	   	   	<hr/>
+	   <h5>技术支持内容示例</h5>	   	   	
+	  			<hr/>
+	   <h5>技术支持内容示例</h5>
+	   	   	   	<hr/>
+	   <h5>技术支持内容示例</h5>
+	   </div>
+  </div>
+  <div class="page_normal">
+	<a href="#" class="page_prev">&lt;</a>
+	<a href="#" class="page_current">1</a>
+	<a href="#">2</a>
+	<a href="#">3</a>
+	<a href="#">4</a>
+	...
+	<a href="#">22</a>
+	<a href="#" class="page_next">&gt;</a>
+	<input id="goto" value="goto..." placeholder="goto"/>
+</div>
+	</div>
+</div>
+</div><!--bottom end-->
+<div class="footer">
+	<center>Copyright.&copy; 2017 YaGuo Company All rights reserved 雅果XXXX版权所有</center>
+</div><!--container end-->
+</body>
+</html>

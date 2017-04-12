@@ -4,29 +4,79 @@
 <meta charset="utf-8">
 <title>内部首页</title>
 <link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="fonts/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/ace.min.css">
 <link rel="stylesheet" href="css/search-page.css">
 <script src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
 <div class="top">
-	<div class="header">
-		<div class="header-left">
-			<h4>yagoole国资监管系统</h4>
-		</div>
-		<div class="header-right">
-			<div class="date">
-				<script>
-						var mydate=new Date(); 
-						var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
-						var nowtime=mydate.toLocaleString();
-						document.write(nowtime);
-						document.write(weekday[mydate.getDay()]);
-			</script>	
-			</div>
-		</div>	
-	</div><!--header end-->
+	<div class="navbar navbar-default" id="navbar">
+<script type="text/javascript">
+	try{ace.settings.check('navbar' , 'fixed')}catch(e){}
+</script>
+ <div class="navbar-container" id="navbar-container">
+   <div class="navbar-header pull-left">
+		<a href="#" class="navbar-brand">
+		<small>yagoole国资监管系统</small>
+		</a><!-- /.brand -->
+	</div><!-- /.navbar-header left-->
+	<div class="navbar-header pull-right" role="navigation">
+	<ul class="nav ace-nav">
+  		<li class="right-list" id="calender">
+ 		  <a href="#">
+ 		   <em class="icon-calendar"></em>
+ 		   </a>
+  		</li>
+  		<li class="right-list" id="chat">
+ 		   <a href="#">
+  		  <em class="icon-comment"></em> 
+  		   </a>
+  		</li>
+  		<li class="right-list" id="alert">
+ 		   <a href="#">
+  		  <em class="icon-bell-alt"></em> 
+  		   </a>
+  		</li>
+  		 <li class="right-list" id="message">
+  		  <a href="#">
+  		  <em class="icon-envelope"></em> 
+  		   </a>	
+  		</li>
+			<li class="right-list-user">
+				<a data-toggle="dropdown" href="#" class="dropdown-toggle" id="user">
+					<span class="user-info">
+					<small>欢迎您</small>TEX
+						</span>
+				<i class="icon-caret-down"></i><img class="nav-user-photo" src="img/timg.jpg" alt="Photo" />
+							</a>
+			<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+				<li>
+					<a href="#">
+					<i class="icon-cog"></i>
+						系统设置
+					</a>
+				</li>
+				<li>
+					<a href="#">
+					<i class="icon-user"></i>
+							个人资料
+					</a>
+				</li>
+					<li class="divider"></li>
+				<li>
+					<a href="#">
+					<i class="icon-off"></i>
+							退出登录
+					</a>
+				</li>
+				</ul><!--user-menu-->
+			</li><!--light-blue-->
+		</ul><!-- /.nav ace-nav-->
+	</div><!-- /.navbar-header right-->
+  </div><!-- /.navbar-container-->
+</div><!-- /.navbar navbar-default --> 
 	<div class="search">
 		<center><h2>一站式搜索</h2>
 		<input type="text" id="ss-l">
@@ -36,35 +86,35 @@
 <div class="bottom">
 	<img id="back1" src="img/back1.png">
 	<img id="back2" src="img/back2.png">
-	<div class="table-area">
+    <div class="table-area">
 	 <table border="0" width="100%" cellpadding="12">
 	 	<tr>
 	 		<td>
 	 			<div class="block" id="jichuziliao">
-	 			<img src="img/timg.jpg">
+	 			<img src="img/icon/基础资料_内部系统.png">
 	 				<h4>基础资料</h4>
-	 				<h6>XXXXX</h6>
+	 				<h6>XXXXXXXXXXX</h6>
 	 			</div>
 	 		</td>
 	 		<td>
 	 			<div class="block" id="dangjiangongzuo">
-	 				<img src="img/timg.jpg">
+	 				<img src="img/icon/党建工作_内部系统.png">
 	 				<h4>党建工作</h4>
-	 				<h5>XXXXX</h5>
+	 				<h6>XXXXXXXXXXXX</h6>
 	 			</div>
 	 		</td>
 	 		<td>
 	 			<div class="block" id="gudingzichan">
-	 				<img src="img/timg.jpg">
+	 				<img src="img/icon/固定资产_内部系统.png">
 	 				<h4>固定资产</h4>
-	 				<h5>XXXXX</h5>
+	 				<h6>XXXXXXXXXXXX</h6>
 	 			</div>
 	 		</td>
 	 		<td>
 	 			<div class="block" id="renshizonghe">
-	 				<img src="img/timg.jpg">
+	 				<img src="img/icon/人事综合_内部系统.png">
 	 				<h4>人事综合</h4>
-	 				<h5>XXXXX</h5>
+	 				<h6>XXXXXXXXXXX</h6>
 	 			</div>
 	 		</td>
 	 	</tr>
@@ -72,30 +122,30 @@
 	 		<td>
 	 			<div class="block"
 	 			id="caiwujianguan">
-	 				<img src="img/timg.jpg">
+	 				<img src="img/icon/财产监督_内部系统.png">
 	 				<h4>财务监管</h4>
-	 				<h5>XXXXX</h5>
+	 				<h6>XXXXXXXXXXX</h6>
 	 			</div>
 	 		</td>
 	 		<td>
 	 			<div class="block" id="qiyechanquan">
-	 				<img src="img/timg.jpg">
+	 				<img src="img/icon/企业产权_内部系统.png">
 	 				<h4>企业产权</h4>
-	 				<h5>XXXXX</h5>
+	 				<h6>XXXXXXXXXXX</h6>
 	 			</div>
 	 		</td>
 	 		<td>
 	 			<div class="block" id="touzirongzi">
-	 				<img src="img/timg.jpg">
+	 				<img src="img/icon/投资融资_内部系统.png">
 	 				<h4>投资融资</h4>
-	 				<h5>XXXXX</h5>
+	 				<h6>XXXXXXXXXXX</h6>
 	 			</div>
 	 		</td>
 	 		<td>
 	 			<div class="block" id="zongheshiwu">
-	 				<img src="img/timg.jpg">
+	 				<img src="img/icon/综合事务_内部系统.png">
 	 				<h4>综合事务</h4>
-	 				<h5>XXXXX</h5>
+	 				<h6>XXXXXXXXXXX</h6>
 	 			</div>
 	 		</td>
 	 	</tr>
